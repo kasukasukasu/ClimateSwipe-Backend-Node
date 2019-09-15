@@ -44,6 +44,6 @@ app.get('/', (req, res) => {
 require('./app/routes/task.routes.js')(app);
 
 // listen for requests
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, function(){
     console.log("Server is listening on port 4000");
 });
